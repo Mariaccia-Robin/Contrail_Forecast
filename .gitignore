@@ -1,0 +1,26 @@
+# Python cache and environment
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+.env
+.venv/
+*.egg-info/
+*.log
+
+# GRIB index and NetCDF cache files (but keep actual data)
+data/*.idx
+data/*.grib
+data/*.nc
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+
+# Output artifacts
+*.pkl
+*.h5
+*.hdf5
+
+# Temporary files
+*.tmp
+*.bak
