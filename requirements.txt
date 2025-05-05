@@ -5,3 +5,4 @@ pandas==2.2.3
 scikit_learn==1.6.1
 timezonefinder==6.5.9
 xarray==2025.4.0
+cfgrib

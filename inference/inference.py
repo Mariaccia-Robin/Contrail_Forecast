@@ -41,7 +41,7 @@ def regressor_predict(X):
     features = model_bundle['features']
     X = X[features].copy()
     y_pred = regressor.predict(X)
-    X['Forecasted Contrail (kgCO2e)'] = y_pred
+    X['Forecasted Contrails (kgCO2e)'] = y_pred
     return X
 
 def predict(raw_input):
@@ -67,11 +67,11 @@ def predict(raw_input):
     # Compute pollution amount for contrail flights
     contrail_impact = regressor_predict(X_contrail)
     
-    output = raw_input.merge(contrail_impact[['Distance Flown (km)', 'Forecasted Contrail (kgCO2e)']], 
+    output = raw_input.merge(contrail_impact[['Distance Flown (km)', 'Forecasted Contrails (kgCO2e)']], 
                              on='Distance Flown (km)', how='left')
     
     # Missing values are those which were identified by the classification as non-contrail generating flights
-    output['Forecasted Contrail (kgCO2e)'] = output['Forecasted Contrail (kgCO2e)'].fillna(0)
+    output['Forecasted Contrails (kgCO2e)'] = output['Forecasted Contrails (kgCO2e)'].fillna(0)
     
     print('Inference finished.')
 

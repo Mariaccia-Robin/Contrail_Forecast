@@ -26,4 +26,4 @@ def test_predict():
     out = predict(sample)
     
     # Assert that the mean absolute value of 'Forecasted Contrail (kgCO2e)' is greater than 0 just to know it sucessfully completed
-    assert out['Forecasted Contrail (kgCO2e)'].abs().mean() > 0
+    assert out['Forecasted Contrails (kgCO2e)'].abs().mean() > 0
