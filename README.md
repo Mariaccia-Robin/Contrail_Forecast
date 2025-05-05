@@ -25,8 +25,11 @@
 - Follow the instructions in the notebook to preprocess the data, train the model, and save it.
 
 ## Inference
-- Before running the inference, you need to add the dataset files (.grib) I sent with the rest of my deliverables. (they were too big to push on git)
+- Before running the inference, you need to add the two dataset files (.grib) I sent with the rest of my deliverables in the `data` folder of the project.
+
+(they were too big to push on git)
 Note : I had to download the datasets because I couldn't get the ERA5 APIs to work, as I had very limited time to complete the project, I had to make concessions.
+
 - To run inference, execute the following Python script:
   ```bash
   python Contrail_Forecast input_file_path output_file_path
